@@ -81,6 +81,10 @@ void Sprite::draw()
 	glBindTexture(GL_TEXTURE_2D, texID);
 	glUniform1i(glGetUniformLocation(shader->ID, "ourTexture1"), 0);
 
+	// EXERCICIO C
+	//glUniform3f(glGetUniformLocation(shader->ID, "modifier"), 0.0, 0.0, 1.0);
+	// EXERCICIO C
+
 	glBindVertexArray(VAO);
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 	glBindVertexArray(0);

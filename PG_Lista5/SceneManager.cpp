@@ -144,7 +144,6 @@ unsigned int SceneManager::loadTexture(string filename) {
 	unsigned char *data = stbi_load(filename.c_str(), &width, &height, &nrChannels, 0);
 	
 	if (data) {
-		// LISTA 5
 		int tamanho = width * height * nrChannels;
 		
 		for (int i = 0; i < tamanho; i += nrChannels) {
@@ -164,13 +163,12 @@ unsigned int SceneManager::loadTexture(string filename) {
 
 
 			// EXERCICIO B
-			int media = (data[i] + data[i + 1] + data[i + 2]) / 3;
-			data[i] = media;
-			data[i + 1] = media;
-			data[i + 2] = media;
+			//int media = (data[i] + data[i + 1] + data[i + 2]) / 3;
+			//data[i] = media;
+			//data[i + 1] = media;
+			//data[i + 2] = media;
 			// EXERCICIO B
 		}
-		// LISTA 5
 
 
 		if (nrChannels == 3) {
